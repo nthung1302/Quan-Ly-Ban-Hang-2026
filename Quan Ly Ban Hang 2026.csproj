@@ -1,0 +1,59 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <RootNamespace>Files</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>setup.ico</ApplicationIcon>
+    <BaseOutputPath>C:\Users\nthun\OneDrive\Desktop</BaseOutputPath>
+    <ProduceReferenceAssembly>True</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="setup.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\Responsies\" />
+    <Folder Include="Models\Requests\" />
+    <Folder Include="Resources\Styles\" />
+    <Folder Include="Temp\" />
+    <Folder Include="Resources\Images\" />
+    <Folder Include="Resources\Fonts\" />
+    <Folder Include="Resources\Tems\" />
+    <Folder Include="Resources\Reports\" />
+    <Folder Include="Services\" />
+    <Folder Include="Repositories\" />
+    <Folder Include="Views\Pages\" />
+    <Folder Include="Views\Windows\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Systems.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Systems.settings</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Data.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Data.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Systems.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Systems.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="Properties\Data.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Data.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
