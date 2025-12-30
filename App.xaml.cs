@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using Files.Helpers;
+using System.Windows;
 
 namespace Quan_Ly_Ban_Hang_2026
 {
@@ -9,6 +10,7 @@ namespace Quan_Ly_Ban_Hang_2026
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
+
         }
 
     }

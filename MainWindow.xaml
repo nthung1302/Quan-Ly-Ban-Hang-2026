@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Files" xmlns:layout="clr-namespace:Files.Resources.Styles.Layouts"
         mc:Ignorable="d"
-        Title="{DynamicResource AppName}" 
+        Title="{DynamicResource __app_name}" 
         Height="450" Width="800" BorderThickness="0.5" 
         BorderBrush="{DynamicResource SurfaceBackgroundBrush}" 
         Background="{DynamicResource PrimaryBackgroundColor}">

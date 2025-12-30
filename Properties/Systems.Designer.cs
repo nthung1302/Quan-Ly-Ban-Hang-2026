@@ -26,35 +26,24 @@ namespace Files.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool IsFirstRun {
+        public bool is_first_run {
             get {
-                return ((bool)(this["IsFirstRun"]));
+                return ((bool)(this["is_first_run"]));
             }
             set {
-                this["IsFirstRun"] = value;
+                this["is_first_run"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool IsActive {
+        public bool is_active {
             get {
-                return ((bool)(this["IsActive"]));
+                return ((bool)(this["is_active"]));
             }
             set {
-                this["IsActive"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.DateTime IsEndActive {
-            get {
-                return ((global::System.DateTime)(this["IsEndActive"]));
-            }
-            set {
-                this["IsEndActive"] = value;
+                this["is_active"] = value;
             }
         }
     }

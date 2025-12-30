@@ -1,0 +1,57 @@
+﻿<Page x:Class="Files.Views.Pages.DataBaseConfigPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Files.Views.Pages"
+      mc:Ignorable="d" Width="800"
+      Title="{DynamicResource _app_name}" VerticalAlignment="Center" HorizontalAlignment="Center">
+
+    <Grid>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <StackPanel Grid.Column="0" Margin="15 0">
+            <TextBlock Text="Cấu hình cở dữ liệu" HorizontalAlignment="Center" FontSize="36" Margin="10" FontWeight="SemiBold" Foreground="{DynamicResource PrimaryTextColor}"/>
+            <TextBox x:Name="tb_server_name" Style="{DynamicResource PrimaryTextBoxStyle}"/>
+            <TextBox x:Name="tb_user" Style="{DynamicResource PrimaryTextBoxStyle}"/>
+            <TextBox x:Name="tb_password" Style="{DynamicResource PrimaryTextBoxStyle}"/>
+            <TextBox x:Name="tb_data_name" Style="{DynamicResource PrimaryTextBoxStyle}"/>
+            <Button Content="Kết nối" Margin="10" Style="{DynamicResource BtnPrimaryStyle}"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1">
+            <TextBlock Text="Tại sao bạn lại thấy thông báo náy?"/>
+        </StackPanel>
+    </Grid>
+
+    <Page.Resources>
+        <Style x:Key="PrimaryTextBoxStyle" TargetType="{x:Type TextBox}">
+            <Setter Property="Foreground" Value="{DynamicResource PrimaryTextColor}"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="CaretBrush" Value="{DynamicResource PrimaryCusorColor}"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="AllowDrop" Value="True" />
+            <Setter Property="Padding" Value="1 3"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst" />
+            <Setter Property="Stylus.IsFlicksEnabled" Value="False" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border x:Name="container" Background="{TemplateBinding Background}" BorderThickness="0 0 0 1" BorderBrush="{DynamicResource PrimaryBoderColor}">
+                            <Grid Margin="{TemplateBinding Padding}">
+                                <ScrollViewer x:Name="PART_ContentHost" Focusable="False" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" />
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+</Page>

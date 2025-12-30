@@ -1,7 +1,5 @@
 ﻿using Files.Helpers;
 using Files.Properties;
-using System;
-using System.Net.NetworkInformation;
 using System.Windows;
 
 namespace Files
@@ -12,7 +10,6 @@ namespace Files
         {
             InitializeComponent();
 
-            // ===== WINDOW STYLE =====
             WindowStyle = WindowStyle.None;
             ResizeMode = ResizeMode.NoResize;
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
@@ -23,43 +20,44 @@ namespace Files
             Width = wa.Width;
             Height = wa.Height;
 
-            Loaded += MainWindow_Loaded;
+            LogHelper.add("Application started.");
 
+            Loaded += MainWindow_Loaded;
         }
 
         private async void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
+            (bool success, string message) result;
+
             try
             {
-                if(Settings.Default.PublicIP == "")
+                if (string.IsNullOrEmpty(Settings.Default.public_ip))
                 {
-                    string publicIP = await NetworkHelper.GetPublicIPAsync();
-                    Settings.Default.PublicIP = publicIP;
+                    string _public_ip = await NetworkHelper.GetPublicIPAsync();
+                    Settings.Default.public_ip = _public_ip;
                     Settings.Default.Save();
                 }
             }
             catch
             {
-                Settings.Default.PublicIP = "UNKNOWN";
+                Settings.Default.public_ip = "UNKNOWN";
             }
 
-            // ===== FIRST RUN =====
-            bool isFirstRun = Systems.Default.IsFirstRun;
+            bool _is_first_run = Systems.Default.is_first_run;
 
-            if (isFirstRun)
+            if (_is_first_run)
             {
-                Settings.Default.ApplicationPath = AppDomain.CurrentDomain.BaseDirectory;
-                Settings.Default.Save();
-
-                Systems.Default.IsFirstRun = false;
-                Systems.Default.Save();
-
-                MainPage.Navigate(new Views.Pages.FirstPage());
+                result = new ChangePageHelper().Url("/Views/Pages/FirstPage.xaml");
+            }
+            else
+            {
+                result = new ChangePageHelper().Url("/Views/Pages/LoginPage.xaml");
             }
 
-            MainPage.Navigate(new Views.Pages.FirstPage());
+            if (!result.success)
+            {
+                MessageBox.Show(result.message);
+            }
         }
-
-     
     }
 }

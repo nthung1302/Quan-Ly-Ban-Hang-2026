@@ -14,11 +14,11 @@ using System.Windows.Shapes;
 namespace Files.Views.Pages
 {
     /// <summary>
-    /// Interaction logic for SplashPage.xaml
+    /// Interaction logic for CreateAccountPage.xaml
     /// </summary>
-    public partial class SplashPage : Page
+    public partial class CreateAccountPage : Page
     {
-        public SplashPage()
+        public CreateAccountPage()
         {
             InitializeComponent();
         }

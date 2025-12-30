@@ -1,0 +1,24 @@
+﻿<Page x:Class="Files.Views.Pages.LoginPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Files.Views.Pages"
+      mc:Ignorable="d" 
+      Title="{DynamicResource _app_name}" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+    <StackPanel Orientation="Horizontal">
+        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Text="Mừng bạn trở lại" Foreground="{DynamicResource PrimaryTextColor}" FontSize="36" FontWeight="SemiBold"/>
+            <Image Grid.Row="1" Source="/Resources/Images/PNG/account-login.png" Stretch="Uniform" Height="120"/>
+        </Grid>
+        
+        
+    </StackPanel>
+</Page>

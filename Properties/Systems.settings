@@ -2,14 +2,11 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Files.Properties" GeneratedClassName="Systems">
   <Profiles />
   <Settings>
-    <Setting Name="IsFirstRun" Type="System.Boolean" Scope="User">
+    <Setting Name="is_first_run" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="IsActive" Type="System.Boolean" Scope="User">
+    <Setting Name="is_active" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
-    </Setting>
-    <Setting Name="IsEndActive" Type="System.DateTime" Scope="User">
-      <Value Profile="(Default)" />
     </Setting>
   </Settings>
 </SettingsFile>

@@ -1,20 +1,20 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Files.Properties" GeneratedClassName="DataBase">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Files.Properties" GeneratedClassName="Data">
   <Profiles />
   <Settings>
-    <Setting Name="DataServer" Type="System.String" Scope="User">
+    <Setting Name="data_server" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="DataUser" Type="System.String" Scope="User">
+    <Setting Name="data_user" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="DataName" Type="System.String" Scope="User">
+    <Setting Name="data_name" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="DataPassword" Type="System.String" Scope="User">
+    <Setting Name="data_password" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="DataPort" Type="System.String" Scope="User">
+    <Setting Name="data_port" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
   </Settings>

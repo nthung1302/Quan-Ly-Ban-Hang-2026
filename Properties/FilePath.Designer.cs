@@ -13,11 +13,11 @@ namespace Files.Properties {
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.14.0.0")]
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+    internal sealed partial class FilePath : global::System.Configuration.ApplicationSettingsBase {
         
-        private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
+        private static FilePath defaultInstance = ((FilePath)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new FilePath())));
         
-        public static Settings Default {
+        public static FilePath Default {
             get {
                 return defaultInstance;
             }
@@ -26,36 +26,24 @@ namespace Files.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string key_active {
+        public string _applicaion_path {
             get {
-                return ((string)(this["key_active"]));
+                return ((string)(this["_applicaion_path"]));
             }
             set {
-                this["key_active"] = value;
+                this["_applicaion_path"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string public_ip {
+        public string _temp_path {
             get {
-                return ((string)(this["public_ip"]));
+                return ((string)(this["_temp_path"]));
             }
             set {
-                this["public_ip"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string server_ip {
-            get {
-                return ((string)(this["server_ip"]));
-            }
-            set {
-                this["server_ip"] = value;
+                this["_temp_path"] = value;
             }
         }
     }

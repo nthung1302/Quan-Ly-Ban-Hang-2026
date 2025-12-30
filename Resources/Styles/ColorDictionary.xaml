@@ -2,7 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <!-- Background Color --> 
     <SolidColorBrush x:Key="PrimaryBackgroundColor" Color="#FF2A313E"/>
-    <SolidColorBrush x:Key="SecundaryBackgroundColor" Color="#CCCCCC"/>
+    <SolidColorBrush x:Key="SecundaryBackgroundColor" Color="#154CC2"/>
     <SolidColorBrush x:Key="SurfaceBackgroundBrush" Color="#8C1A10"/>
     <!-- Text Color -->
 
@@ -17,4 +17,10 @@
     <SolidColorBrush x:Key="PrimaryButtonColor" Color="#006eff"/>
 
     <SolidColorBrush x:Key="PrimaryRedColor" Color="#E81123"/>
+
+    <SolidColorBrush x:Key="PrimaryLineColor" Color="#CCCCCC"/>
+
+    <SolidColorBrush x:Key="PrimaryCusorColor" Color="#CCCCCC"/>
+
+    <SolidColorBrush x:Key="PrimaryBoderColor" Color="#CCCCCC"/>
 </ResourceDictionary>

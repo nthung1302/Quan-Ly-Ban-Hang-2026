@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Files.Helpers;
 using System.Net.NetworkInformation;
-using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Threading;
 
@@ -21,14 +21,13 @@ namespace Files.Resources.Styles.Layouts
 
         private void LoadStaticInfo()
         {
-            string activeKey = Properties.Settings.Default.KeyActive;
-            string publicIP = Properties.Settings.Default.PublicIP;
+            string _key_active = Properties.Settings.Default.key_active;
+            string _public_ip = Properties.Settings.Default.public_ip;
 
-            TbKey.Text = "Your Key: " + (string.IsNullOrWhiteSpace(activeKey) ? "..." : activeKey);
-            TbIpPublic.Text = "Your IP: " + (string.IsNullOrWhiteSpace(publicIP) ? "..." : publicIP);
+            tb_key.Text = "Key: " + (string.IsNullOrWhiteSpace(_key_active) ? "..." : _key_active);
+            tb_public_ip.Text = "IP: " + (string.IsNullOrWhiteSpace(_public_ip) ? "..." : _public_ip);
         }
 
-        // 🔥 Ping liên tục
         private void StartPing()
         {
             _pingTimer = new DispatcherTimer
@@ -40,9 +39,9 @@ namespace Files.Resources.Styles.Layouts
             {
                 long ping = await PingServerAsync("148.113.195.241");
 
-                TbPing.Text = ping >= 0
-                    ? $"Ping: {ping} ms"
-                    : "Ping: Offline";
+                tb_ping.Text = ping >= 0
+                    ? $"{ping} ms"
+                    : "Offline";
             };
 
             _pingTimer.Start();
@@ -57,7 +56,7 @@ namespace Files.Resources.Styles.Layouts
 
             timer.Tick += (s, e) =>
             {
-                TbTimer.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+                tb_timer.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
             };
 
             timer.Start();
@@ -75,6 +74,21 @@ namespace Files.Resources.Styles.Layouts
             {
                 return -1;
             }
+        }
+
+        private void UserControl_Loaded(object sender, System.Windows.RoutedEventArgs e)
+        {
+            if (!DataBaseHelper.Initialize())
+            {
+                tb_data.Text = "Not connected...";
+                var result = new ChangePageHelper().Url("/Views/Pages/DataBaseConfigPage.xaml");
+                if (!result.success)
+                {
+                    LogHelper.add(result.message);
+                }
+            }    
+            else
+                tb_data.Text = "Connect success...";
         }
     }
 }

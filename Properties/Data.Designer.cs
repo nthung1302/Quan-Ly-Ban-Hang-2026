@@ -26,60 +26,60 @@ namespace Files.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string DataServer {
+        public string data_server {
             get {
-                return ((string)(this["DataServer"]));
+                return ((string)(this["data_server"]));
             }
             set {
-                this["DataServer"] = value;
+                this["data_server"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string DataUser {
+        public string data_user {
             get {
-                return ((string)(this["DataUser"]));
+                return ((string)(this["data_user"]));
             }
             set {
-                this["DataUser"] = value;
+                this["data_user"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string DataName {
+        public string data_name {
             get {
-                return ((string)(this["DataName"]));
+                return ((string)(this["data_name"]));
             }
             set {
-                this["DataName"] = value;
+                this["data_name"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string DataPassword {
+        public string data_password {
             get {
-                return ((string)(this["DataPassword"]));
+                return ((string)(this["data_password"]));
             }
             set {
-                this["DataPassword"] = value;
+                this["data_password"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string DataPort {
+        public string data_port {
             get {
-                return ((string)(this["DataPort"]));
+                return ((string)(this["data_port"]));
             }
             set {
-                this["DataPort"] = value;
+                this["data_port"] = value;
             }
         }
     }

@@ -1,4 +1,21 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <system:String x:Key="_app_name">GoldBox Sales client version 1.0.0</system:String>
+    <system:String x:Key="_chat_support">Nhắn hỗ trợ</system:String>
+    <system:String x:Key="_console">Bảng điều khiển</system:String>
+    <system:String x:Key="_copy_right">© 2025 GoldBox Sales bởi Nguyễn Minh Hùng. Bảo lưu mọi quyền.</system:String>
+    <system:String x:Key="_data_base">Data base connected...</system:String>
+    <!-- First page string -->
+    <system:String x:Key="_fp_name">GoldBox Sales</system:String>
+    <system:String x:Key="_fp_title">Đăng nhập để thiết lập GoldBox Sale</system:String>
+    <system:String x:Key="_fp_label_1">Đăng nhập dễ dàng – sử dụng ngay</system:String>
+    <system:String x:Key="_fp_label_2">Quản lý dữ liệu – ra quyết định chính xác</system:String>
+    <system:String x:Key="_fp_label_3">An toàn dữ liệu – yên tâm sử dụng</system:String>
+    <system:String x:Key="_fp_label_4">Đăng nhập tài khoản GoldBox Sale cá nhân, doanh nghiệp của bạn</system:String>
+    <system:String x:Key="_fp_btn_text_1">Đăng nhập</system:String>
+    <system:String x:Key="_fp_btn_text_2">Tạo tài khỏa mới</system:String>
+    
+    <!-- Coppy right -->
     
 </ResourceDictionary>

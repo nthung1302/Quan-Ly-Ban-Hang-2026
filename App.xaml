@@ -8,8 +8,9 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/Resources/Styles/ColorDictionary.xaml"/>
-                <ResourceDictionary Source="/Resources/Languges/eng.xaml"/>
+                <ResourceDictionary Source="/Resources/Languges/vie.xaml"/>
                 <ResourceDictionary Source="/Resources/Styles/IconDictionary.xaml"/>
+                <ResourceDictionary Source="/Resources/Styles/ButtonDictionary.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

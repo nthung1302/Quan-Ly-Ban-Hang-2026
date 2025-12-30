@@ -5,16 +5,16 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Files.Views.Pages"
       mc:Ignorable="d" 
-      Title="{DynamicResource AppName}" HorizontalAlignment="Center" VerticalAlignment="Center">
+      Title="{DynamicResource _app_name}" HorizontalAlignment="Center" VerticalAlignment="Center">
 
     <StackPanel Orientation="Vertical">
-        
+
         <StackPanel Orientation="Horizontal">
             <Image Source="/Resources/Images/Application.png" Height="26" Width="26"/>
-            <TextBlock Text="{DynamicResource AppName}" FontSize="18" FontWeight="SemiBold" Foreground="{DynamicResource SecundaryTextColor}" Margin="10"/>
+            <TextBlock Text="{DynamicResource _fp_name}" FontSize="18" FontWeight="SemiBold" Foreground="{DynamicResource SecundaryTextColor}" Margin="10"/>
         </StackPanel>
-        
-        <TextBlock Text="{DynamicResource first_page_title}" FontSize="24" FontWeight="SemiBold" HorizontalAlignment="Center" Margin="0 15" Foreground="{DynamicResource PrimaryTextColor}"/>
+
+        <TextBlock Text="{DynamicResource _fp_title}" FontSize="24" FontWeight="SemiBold" HorizontalAlignment="Center" Margin="0 15" Foreground="{DynamicResource PrimaryTextColor}"/>
 
         <Grid Margin="0 25">
             <Grid.ColumnDefinitions>
@@ -25,22 +25,22 @@
 
             <StackPanel Grid.Column="0" Orientation="Vertical" Margin="15 0">
                 <Image Source="/Resources/Images/PNG/login.png" Stretch="Uniform" Height="100" Width="100"/>
-                <TextBlock Text="Đăng nhập dễ dàng – sử dụng ngay" TextAlignment="Center" FontSize="11" Margin="0 10" FontWeight="SemiBold" Foreground="{DynamicResource SecundaryTextColor}"/>
+                <TextBlock Text="{DynamicResource _fp_label_1}" TextAlignment="Center" FontSize="11" Margin="0 10" FontWeight="SemiBold" Foreground="{DynamicResource SecundaryTextColor}"/>
             </StackPanel>
 
             <StackPanel Grid.Column="1" Orientation="Vertical" Margin="15 0">
                 <Image Source="/Resources/Images/PNG/analysis.png" Stretch="Uniform" Height="100" Width="100"/>
-                <TextBlock Text="Quản lý dữ liệu – ra quyết định chính xác" TextAlignment="Center" FontSize="11" Margin="0 10" FontWeight="SemiBold" Foreground="{DynamicResource SecundaryTextColor}"/>
+                <TextBlock Text="{DynamicResource _fp_label_2}" TextAlignment="Center" FontSize="11" Margin="0 10" FontWeight="SemiBold" Foreground="{DynamicResource SecundaryTextColor}"/>
             </StackPanel>
 
             <StackPanel Grid.Column="2" Orientation="Vertical" Margin="15 0">
                 <Image Source="/Resources/Images/PNG/cyber-security.png" Stretch="Uniform" Height="100" Width="100"/>
-                <TextBlock Text="An toàn dữ liệu – yên tâm sử dụng" TextAlignment="Center" FontSize="11" Margin="0 10" FontWeight="SemiBold" Foreground="{DynamicResource SecundaryTextColor}"/>
+                <TextBlock Text="{DynamicResource _fp_label_3}" TextAlignment="Center" FontSize="11" Margin="0 10" FontWeight="SemiBold" Foreground="{DynamicResource SecundaryTextColor}"/>
             </StackPanel>
 
         </Grid>
 
-        <TextBlock Text="Đăng nhập tài khoản GoldBox Sale cá nhân, doanh nghiệp của bạn" HorizontalAlignment="Center" Margin="0 15" FontSize="13" FontWeight="SemiBold" Foreground="{DynamicResource PrimaryTextColor}"/>
+        <TextBlock Text="{DynamicResource _fp_label_4}" HorizontalAlignment="Center" Margin="0 15" FontSize="13" FontWeight="SemiBold" Foreground="{DynamicResource PrimaryTextColor}"/>
 
         <Grid Margin="0 15">
             <Grid.ColumnDefinitions>
@@ -48,124 +48,12 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <Button Grid.Column="0" x:Name="BtnLogin" Content="Đăng nhập" Style="{DynamicResource BtnPrimaryStyle}"/>
-            <Button Grid.Column="1" x:Name="BtnRegister" Content="Tạo tài khoản" Style="{DynamicResource BtnSecundaryStyle}"/>
+            <Button Grid.Column="0" x:Name="BtnLogin" Content="{DynamicResource _fp_btn_text_1}" Style="{DynamicResource BtnPrimaryStyle}" Click="BtnLogin_Click"/>
+            <Button Grid.Column="1" x:Name="BtnRegister" Content="{DynamicResource _fp_btn_text_2}" Style="{DynamicResource BtnSecundaryStyle}" Click="BtnRegister_Click"/>
         </Grid>
 
-        <TextBlock Text="© 2025 GoldBox Sales bởi Nguyễn Minh Hùng. Bảo lưu mọi quyền." Margin="0 10" HorizontalAlignment="Center" FontSize="11" Foreground="{DynamicResource SecundaryTextColor}"/>
+        <TextBlock Text="{DynamicResource _copy_right}" Margin="0 10" HorizontalAlignment="Center" FontSize="11" Foreground="{DynamicResource SecundaryTextColor}"/>
 
     </StackPanel>
-
-    <Page.Resources>
-        <Style x:Key="BtnPrimaryStyle" TargetType="Button">
-            <Setter Property="Width" Value="250"/>
-            <Setter Property="Padding" Value="8"/>
-            <Setter Property="BorderThickness" Value="2"/>
-            <Setter Property="Foreground" Value="{DynamicResource PrimaryTextColor}"/>
-            <Setter Property="FontSize" Value="14"/>
-            <Setter Property="FontWeight" Value="SemiBold"/>
-            <Setter Property="RenderTransformOrigin" Value="0.2,0.2"/>
-            <Setter Property="Background" Value="{DynamicResource PrimaryButtonColor}"/>
-            <Setter Property="Margin" Value="10 0"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        
-                        <Border x:Name="container" Background="{TemplateBinding Background}" CornerRadius="3" Padding="{TemplateBinding Padding}">
-  
-                            <Border.RenderTransform>
-                                <ScaleTransform x:Name="scale" ScaleX="1" ScaleY="1"/>
-                            </Border.RenderTransform>
-
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </Border>
-
-                        <ControlTemplate.Triggers>
-
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Trigger.EnterActions>
-                                    <BeginStoryboard>
-                                        <Storyboard>
-
-                                            <DoubleAnimation Storyboard.TargetName="scale" Storyboard.TargetProperty="ScaleX" To="1.015" Duration="0:0:0.15"/>
-
-                                            <DoubleAnimation Storyboard.TargetName="scale" Storyboard.TargetProperty="ScaleY" To="1.015" Duration="0:0:0.15"/>
-
-                                        </Storyboard>
-                                    </BeginStoryboard>
-                                </Trigger.EnterActions>
-
-                                <Trigger.ExitActions>
-                                    <BeginStoryboard>
-                                        <Storyboard>
-
-                                            <DoubleAnimation Storyboard.TargetName="scale" Storyboard.TargetProperty="ScaleX" To="1" Duration="0:0:0.15"/>
-
-                                            <DoubleAnimation Storyboard.TargetName="scale" Storyboard.TargetProperty="ScaleY" To="1" Duration="0:0:0.15"/>
-
-                                        </Storyboard>
-                                    </BeginStoryboard>
-                                </Trigger.ExitActions>
-                            </Trigger>
-
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-
-
-        <Style x:Key="BtnSecundaryStyle" BasedOn="{StaticResource BtnPrimaryStyle}" TargetType="{x:Type Button}">
-            <Setter Property="Template">
-                <Setter.Value>
-                        <ControlTemplate TargetType="{x:Type Button}">
-                            
-                            <Border x:Name="container" Background="Transparent" CornerRadius="3" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{DynamicResource PrimaryButtonColor}" Padding="{TemplateBinding Padding}">
-
-                                <Border.RenderTransform>
-                                    <ScaleTransform x:Name="scale" ScaleX="1" ScaleY="1"/>
-                                </Border.RenderTransform>
-
-                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                            </Border>
-                            
-                        <ControlTemplate.Triggers>
-                            
-                            <Trigger Property="IsMouseOver" Value="True">
-                                
-                                <Trigger.EnterActions>
-                                    <BeginStoryboard>
-                                        <Storyboard>
-
-                                            <DoubleAnimation Storyboard.TargetName="scale" Storyboard.TargetProperty="ScaleX" To="1.015" Duration="0:0:0.15"/>
-
-                                            <DoubleAnimation Storyboard.TargetName="scale" Storyboard.TargetProperty="ScaleY" To="1.015" Duration="0:0:0.15"/>
-
-                                        </Storyboard>
-                                    </BeginStoryboard>
-                                </Trigger.EnterActions>
-
-                                <Trigger.ExitActions>
-                                    <BeginStoryboard>
-                                        <Storyboard>
-                                            
-                                            <DoubleAnimation Storyboard.TargetName="scale" Storyboard.TargetProperty="ScaleX" To="1" Duration="0:0:0.15"/>
-
-                                            <DoubleAnimation Storyboard.TargetName="scale" Storyboard.TargetProperty="ScaleY" To="1" Duration="0:0:0.15"/>
-
-                                        </Storyboard>
-                                    </BeginStoryboard>
-                                </Trigger.ExitActions>
-                                
-                            </Trigger>
-
-                            <Trigger Property="IsFocused" Value="True">
-                                    <Setter TargetName="container" Property="Opacity" Value="0.9"/>
-                                </Trigger>
-                            </ControlTemplate.Triggers>
-                        </ControlTemplate>
-                    </Setter.Value>
-                </Setter>
-        </Style>
-    </Page.Resources>
+    
 </Page>

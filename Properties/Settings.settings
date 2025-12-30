@@ -2,16 +2,13 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Files.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="ApplicationPath" Type="System.String" Scope="User">
+    <Setting Name="key_active" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="KeyActive" Type="System.String" Scope="User">
+    <Setting Name="public_ip" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="PublicIP" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="IPServer" Type="System.String" Scope="User">
+    <Setting Name="server_ip" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
   </Settings>

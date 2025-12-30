@@ -13,21 +13,21 @@
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
 
-        <Path Data="{DynamicResource AppIcon}" Grid.Column="0" Height="20" VerticalAlignment="Center" Width="20" Margin="6" Stretch="Uniform" Fill="{DynamicResource PrimaryIconColor}"/>
+        <Path Data="{DynamicResource _app_icon}" Grid.Column="0" Height="20" VerticalAlignment="Center" Width="20" Margin="6" Stretch="Uniform" Fill="{DynamicResource PrimaryIconColor}" ToolTip="{DynamicResource _app_name}" KeyDown="logo_keydown"/>
 
         <TextBlock Grid.Column="1" Text="GoldBox Sale Client version 1.0.0" VerticalAlignment="Center" FontSize="13" FontWeight="SemiBold" Foreground="{DynamicResource PrimaryTextColor}"/>
 
         <StackPanel Grid.Column="2" Orientation="Horizontal">
-            <Button x:Name="Minisize" ToolTip="Minisize" Style="{DynamicResource ButtonTitleBarStyle}" Click="Minisize_Click">
-                <Path Data="{DynamicResource MinisizeIcon}" 
+            <Button x:Name="btn_mini_size" ToolTip="Minisize" Style="{DynamicResource ButtonTitleBarStyle}" Click="btn_mini_size_click">
+                <Path Data="{DynamicResource _minisize_icon}" 
                       Fill="{DynamicResource PrimaryIconColor}" Stretch="Uniform" Width="12"/>
             </Button>
-            <Button x:Name="Restoresize" ToolTip="Restore size" Style="{DynamicResource ButtonTitleBarStyle}" Click="Restoresize_Click">
-                <Path Data="{DynamicResource RestoreIcon}" 
+            <Button x:Name="btn_restore_size" ToolTip="Restore size" Style="{DynamicResource ButtonTitleBarStyle}" Click="btn_restore_size_click">
+                <Path Data="{DynamicResource _restoresize_icon}" 
                       Fill="{DynamicResource SecundaryIconColor}" Stretch="Uniform" Width="11"/>
             </Button>
-            <Button x:Name="CloseWindow" ToolTip="Maxsize" Style="{DynamicResource ButtonTitleBarCloseStyle}" Click="CloseWindow_Click">
-                <Path Data="{DynamicResource CloseWindowIcon}" 
+            <Button x:Name="btn_close_window" ToolTip="Maxsize" Style="{DynamicResource ButtonTitleBarCloseStyle}" Click="btn_close_window_click">
+                <Path Data="{DynamicResource _closewindow_icon}" 
                       Fill="{DynamicResource PrimaryIconColor}" Stretch="Uniform" Width="11"/>
             </Button>
         </StackPanel>
