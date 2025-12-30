@@ -1,12 +1,32 @@
-﻿<Window x:Class="Quan_Ly_Ban_Hang_2026.MainWindow"
+﻿<Window x:Class="Files.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Quan_Ly_Ban_Hang_2026"
+        xmlns:local="clr-namespace:Files" xmlns:layout="clr-namespace:Files.Resources.Styles.Layouts"
         mc:Ignorable="d"
-        Title="MainWindow" ResizeMode="NoResize" Height="450" Width="800" Background="#FF2A313E">
+        Title="{DynamicResource AppName}" 
+        Height="450" Width="800" BorderThickness="0.5" 
+        BorderBrush="{DynamicResource SurfaceBackgroundBrush}" 
+        Background="{DynamicResource PrimaryBackgroundColor}">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
 
+        <Grid Grid.Row="0">
+            <layout:TitleBarControl/>
+        </Grid>
+
+        <Label Grid.Row="1" Height="0.5" Background="{DynamicResource PrimaryIconColor}"/>
+
+        <Frame x:Name="MainPage" Grid.Row="2" NavigationUIVisibility="Hidden"/>
+      
+        <Grid Grid.Row="3">
+            <layout:FooterControl/>
+        </Grid>
     </Grid>
 </Window>

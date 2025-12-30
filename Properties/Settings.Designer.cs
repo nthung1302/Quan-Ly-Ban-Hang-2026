@@ -13,11 +13,11 @@ namespace Files.Properties {
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.14.0.0")]
-    internal sealed partial class Systems : global::System.Configuration.ApplicationSettingsBase {
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
-        private static Systems defaultInstance = ((Systems)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Systems())));
+        private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
         
-        public static Systems Default {
+        public static Settings Default {
             get {
                 return defaultInstance;
             }
@@ -25,36 +25,49 @@ namespace Files.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool IsFirstRun {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ApplicationPath {
             get {
-                return ((bool)(this["IsFirstRun"]));
+                return ((string)(this["ApplicationPath"]));
             }
             set {
-                this["IsFirstRun"] = value;
+                this["ApplicationPath"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool IsActive {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string KeyActive {
             get {
-                return ((bool)(this["IsActive"]));
+                return ((string)(this["KeyActive"]));
             }
             set {
-                this["IsActive"] = value;
+                this["KeyActive"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.DateTime IsEndActive {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string PublicIP {
             get {
-                return ((global::System.DateTime)(this["IsEndActive"]));
+                return ((string)(this["PublicIP"]));
             }
             set {
-                this["IsEndActive"] = value;
+                this["PublicIP"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string IPServer {
+            get {
+                return ((string)(this["IPServer"]));
+            }
+            set {
+                this["IPServer"] = value;
             }
         }
     }

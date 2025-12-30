@@ -7,31 +7,61 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
-    <ApplicationIcon>setup.ico</ApplicationIcon>
-    <BaseOutputPath>C:\Users\nthun\OneDrive\Desktop</BaseOutputPath>
+    <ApplicationIcon>resources\Images\Application.ico</ApplicationIcon>
+    <BaseOutputPath>\bin</BaseOutputPath>
     <ProduceReferenceAssembly>True</ProduceReferenceAssembly>
+    <AssemblyName>GoldBox Sales</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="setup.ico" />
+    <Compile Remove="Resources\Fonts\**" />
+    <EmbeddedResource Remove="Resources\Fonts\**" />
+    <None Remove="Resources\Fonts\**" />
+    <Page Remove="Resources\Fonts\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\Responsies\" />
+    <None Remove="Resources\Images\Application.png" />
+    <None Remove="Resources\Images\PNG\analysis.png" />
+    <None Remove="Resources\Images\PNG\cyber-security.png" />
+    <None Remove="Resources\Images\PNG\login.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="resources\Images\Application.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Models\Requests\" />
-    <Folder Include="Resources\Styles\" />
-    <Folder Include="Temp\" />
-    <Folder Include="Resources\Images\" />
-    <Folder Include="Resources\Fonts\" />
-    <Folder Include="Resources\Tems\" />
-    <Folder Include="Resources\Reports\" />
-    <Folder Include="Services\" />
+    <Folder Include="Models\Responsies\" />
     <Folder Include="Repositories\" />
-    <Folder Include="Views\Pages\" />
-    <Folder Include="Views\Windows\" />
+    <Folder Include="Resources\Reports\" />
+    <Folder Include="Resources\Tems\" />
+    <Folder Include="Services\" />
+    <Folder Include="Temp\" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Resources\Images\Application.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\PNG\analysis.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\PNG\cyber-security.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\PNG\login.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Update="Properties\Systems.Designer.cs">
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <AutoGen>True</AutoGen>
@@ -45,6 +75,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Update="Properties\Systems.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Systems.Designer.cs</LastGenOutput>
@@ -52,7 +86,10 @@
     <None Update="Properties\Data.settings">
       <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Data.Designer.cs</LastGenOutput>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\tems\1 - Tem Vang.btw">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 

@@ -1,8 +1,14 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Files.Properties" GeneratedClassName="AppConfig">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Files.Properties" GeneratedClassName="Systems">
   <Profiles />
   <Settings>
-    <Setting Name="Application_Path" Type="System.String" Scope="User">
+    <Setting Name="IsFirstRun" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="IsActive" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="IsEndActive" Type="System.DateTime" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
   </Settings>

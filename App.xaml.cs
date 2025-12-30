@@ -1,5 +1,4 @@
-﻿using Files.Properties;
-using System.Windows;
+﻿using System.Windows;
 
 namespace Quan_Ly_Ban_Hang_2026
 {
@@ -10,10 +9,6 @@ namespace Quan_Ly_Ban_Hang_2026
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
-
-            Systems.Default.Application_Path = AppDomain.CurrentDomain.BaseDirectory;
-            Systems.Default.Save();
-
         }
 
     }
